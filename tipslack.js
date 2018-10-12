@@ -1,15 +1,14 @@
 //TipSLACK
 
+require('dotenv').config();
+
 // confidencial parameter ---------------------------------
-
-const SYSTEM_PRIVATE_KEY = "aaaa bbbb cccc dddd eeee ffff gggg hhhh iiii jjjj kkkk llll mmmm nnnn oooo pppp";  //sample
-const SLACK_HOOK_URL = "https://hooks.slack.com/services/XXXXXXXXX/YYYYYYYYY/ZZZZZZZZZZZZZZZZZZZZZZZZ";
-const SLACK_TOKEN = "XXXXXXXXXXXXXXXXXXXXXXX";
-
+const SYSTEM_PRIVATE_KEY = process.env.SYSTEM_PRIVATE_KEY;
+const SLACK_HOOK_URL = process.env.SLACK_HOOK_URL;
+const SLACK_TOKEN = process.env.SLACK_TOKEN;
 // confidencial parameter ---------------------------------
 
 //XEMBook nem-node Framework ///////////////////////////////
-
 const log4js = require('log4js');
 log4js.configure(
 	{
@@ -65,7 +64,7 @@ app.use(function(req, res, next){
 	next();
 })
 */
-app.listen(1337);
+app.listen(process.env.LISTEN_PORT);
 logger.info('start server...');
 
 //XEMBook nem-node Framework ///////////////////////////////
