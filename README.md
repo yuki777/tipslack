@@ -37,5 +37,10 @@ node.jsで動作し、nem-libraryを使用しています。
 * nem-library (1.0.7)
 * express (4.16.3)
 * request
-
+### パッケージインストールと起動
+```
+yarn install
+cp .env.sample .env
+node tipslack.js
+```
 
